@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Auto Trader</title>
+    <style>
+        .fixed {
+            position: fixed;
+            top: 0;
+         /* width: 100%; 
+            z-index: 1000;  */
+        }
+
+        select {
+            font-size: 16px;
+            border: none;
+            outline: none;
+
+
+        }
+
+        option {
+            font-size: 16px;
+        }
+
+        label {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <div class="container">
+            <div class="headerImg"></div>
+            <div class="info">
+
+                <div class="sites">
+                    <a href="">Tap.az</a>
+                    <a href="">Bina.az</a>
+                    <a href="">Boss.az</a>
+                </div>
+
+                <div class="about">
+                    <span style="color: #000;">Dəstək: (012) 505-77-55</span>
+                    <span>Yardım</span>
+                    <span>RU</span>
+                    <span><i class="fa-solid fa-heart"></i>Seçilmişlər</span>
+                    <span><i class="fa-solid fa-user"></i>Giriş</span>
+                </div>
+            </div>
+
+            <nav>
+
+
+                <a href="cars.htm" id="logo">
+                    <h4>AUTO TRADER</h4>
+                </a>
+                <ul id="menuForDesktop">
+                    <li><a href="">Bütün elanlar</a></li>
+                    <li><a href="">Salonlar</a></li>
+                    <li><a href="">Avtokataloq</a></li>
+                    <li><a href="">Moto</a></li>
+                    <li><a href="">Ehtiyyat hissələr və aksesuarlar</a>
+                        <ul class="subMenuForDesktop">
+                            <li><a href="#">Aksesuarlar</a></li>
+                            <li><a href="#">Audio və video texnika</a></li>
+                            <li><a href="#">Avtokosmetika və avtokimya</a></li>
+                            <li><a href="#">GPS naviqatorlar</a></li>
+                            <li><a href="#">Qeydiyyat nişanları</a></li>
+                            <li><a href="#">Siqnalizasiyalar</a></li>
+                            <li><a href="#">Videoqeydiyyatçılar</a></li>
+                            <li><a href="#">Şinlərç disklər və təkərlər</a></li>
+                            <li><a href="#">Digər</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">İcarə</a>
+                        <ul class="subMenuForDesktop">
+                            <li><a href="#">Avtomobillər</a></li>
+                            <li><a href="#">Avtobus və mikroavtobuslar</a></li>
+                            <li><a href="#">Motosiklet və mopedlər</a></li>
+                            <li><a href="#">Xüsusi texnika</a></li>
+                            <li><a href="#">Digər</a></li>
+                        </ul>
+                    </li>
+
+
+                </ul>
+
+                <div id="newAd"><i class="fa-solid fa-plus"></i>Yeni elan</div>
+
+
+
+                <div class="burger-menu">
+                    <button id="burgerBtn" onclick="showMenu()" class="burger-btn">☰</button>
+                    <button id="closeBtn" style="display: none;" onclick="closeMenu()" class="close-btn">X</button>
+                    <div id="menu" class="menu">
+                        <ul>
+                            <li>
+                                <a href="#">Bütün elanlar</a>
+
+                            </li>
+                            <li>
+                                <a href="#">Salonlar</a>
+
+                            </li>
+                            <li>
+                                <a href="#">Avtokataloq</a>
+
+                            </li>
+
+                            <li>
+                                <a href="#">Moto</a>
+
+                            </li>
+
+                            <li>
+                                <a href="#">Ehtiyyat hissələr və aksesuarlar</a>
+                                <ul class="submenu">
+                                    <li><a href="#">Aksesuarlar</a></li>
+                                    <li><a href="#">Audio və video texnika</a></li>
+                                    <li><a href="#">Avtokosmetika və avtokimya</a></li>
+                                    <li><a href="#">GPS naviqatorlar</a></li>
+                                    <li><a href="#">Qeydiyyat nişanları</a></li>
+                                    <li><a href="#">Siqnalizasiyalar</a></li>
+                                    <li><a href="#">Videoqeydiyyatçılar</a></li>
+                                    <li><a href="#">Şinlərç disklər və təkərlər</a></li>
+                                    <li><a href="#">Digər</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">İcarə</a>
+                                <ul class="submenu">
+                                    <li><a href="#">Avtomobillər</a></li>
+                                    <li><a href="#">Avtobus və mikroavtobuslar</a></li>
+                                    <li><a href="#">Motosiklet və mopedlər</a></li>
+                                    <li><a href="#">Xüsusi texnika</a></li>
+                                    <li><a href="#">Digər</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+
+
+        <div class="main">
+
+            <div class="container">
+
+                <div class="banner-left">
+                    <img src="img/banner.jpg" alt="Banner">
+                </div>
+                <div class="banner-right"> <img src="img/banner.jpg" alt="Banner"></div>
+
+
+                <div class="filters">
+                    <div class="filter-item">
+                        <label for="" style="font-size: 18px; text-align: center;">Marka</label>
+
+                        <select id="brandSelect" style="font-size: 16px; text-align: center;">
+
+
+                        </select>
+
+                    </div>
+                    <div class="filter-item model">
+<label for="" style="font-size: 18px; text-align: center;">Model</label>
+                        <select id="modelSelect" style="font-size: 16px; text-align: center;" disabled>
+                            <option value="">Model</option>
+                        </select>
+                    </div>
+                    <div class="filter-item active" id="hamisiButton">Hamısı</div>
+                    <div class="filter-item" id="yeniButton">Yeni</div>
+                    <div class="filter-item" id="surulmusButton">Sürülmüş</div>
+                    <div class="filter-item">
+                        <label for="" style="font-size: 18px; text-align: center;">Şəhər</label>
+                        <select id="citySelect" style="font-size: 16px; text-align: center;">
+                            <option value="">Şəhər</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+
+                        <input id="minInput" type="number" placeholder="Qiymət, min."
+                            style="border: none; outline: none; font-size: 18px">
+                    </div>
+                    <div class="filter-item">
+                        <input id="maksInput" type="number" placeholder="maks."
+                            style="border: none; outline: none; font-size: 18px">
+                    </div>
+                    <div class="filter-item">
+                        <label for="" style="font-size: 18px; text-align: center;">Qiymət</label>
+                        <select id="currencySelect" style="font-size: 16px; text-align: center;">
+                            <option value="">AZN</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">
+                        <label>
+                            <input type="checkbox" id="creditCheck"> Kredit
+                          </label>
+                    </div>
+                    <div class="filter-item">
+                        <label>
+                            <input type="checkbox" id="barterCheck"> Barter
+                          </label>
+                    </div>
+                    <div class="filter-item">
+                        <label for="" style="font-size: 18px; text-align: center;">Ban növü</label>
+                        <select id="banSelect" style="font-size: 16px; text-align: center;">
+                            <option value="">Ban növü</option>
+                        </select>
+                    </div>
+                    <div class="filter-item">İl, min.
+                        <select id="minSelect"></select>
+                    </div>
+                    <div class="filter-item">maks.
+                        <select id="maksSelect"></select>
+                    </div>
+                    <div class="filter-item" style="background-color: var(--dark-blue); color:#fff;" onclick="showAd()">
+                        Elanları göstər
+                    </div>
+
+                    <div onclick="clearAll()" class="filter-item allClear" style="background-color: rgb(123, 130, 137)">
+                        <span id="clear" style="color: var(--dark-blue); text-align:center; color:#fff">Sıfırla</span>
+                    </div>
+                </div>
+
+
+
+
+                <div id="allCars">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <script src="js/turbo-data.js"></script>
+    <script src="js/script.js"></script>
+   
+</body>
+
+</html>

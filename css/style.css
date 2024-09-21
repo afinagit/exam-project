@@ -1,0 +1,697 @@
+:root {
+
+    --dark-blue: rgb(40, 70, 105);
+    /* #5d5bac; */
+}
+
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+
+
+}
+
+nav {
+    background-color: var(--dark-blue);
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    padding: 0 20px;
+
+
+
+
+
+}
+
+.headerImg {
+    background: url('../img/header-img.jpg') center/cover;
+    min-height: 20vh;
+}
+
+#menuForDesktop {
+    display: none;
+}
+
+.info {
+    background-color: #F6F7FA;
+    color: #596385;
+    padding: 10px 20px;
+    font-weight: lighter;
+
+
+
+}
+
+.sites>a,
+.about>span {
+    font: lighter 10px Aria, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.burger-menu {
+    position: relative;
+}
+
+.burger-btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff
+}
+
+.menu {
+    display: none;
+    background-color: #8d8a8a;
+    position: absolute;
+    top: 40px;
+    /*  left: 0; */
+    right: 0;
+    width: 200px;
+    border-radius: 5px;
+    z-index: 1001;
+
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    position: relative;
+
+}
+
+.menu a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background-color: #555;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    left: 200px;
+    top: 0;
+
+    translate: -230%;
+    background-color: #a9a1a1;
+    transition: 0.3s;
+}
+
+.menu li:hover .submenu {
+    display: block;
+    transition: 0.3s;
+}
+
+#menuForDesktop li:hover {
+    color: #b6bbc9;
+    transition: 0.3s;
+    
+}
+
+#menuForDesktop li {
+    position: relative;
+
+}
+
+.subMenuForDesktop {
+    display: none !important;
+    position: absolute;
+    transition: 0.3s;
+}
+
+#menuForDesktop li:hover .subMenuForDesktop {
+    display: block !important;
+    transition: 0.3s;
+    background-color: #fff;
+    min-height: 205px;
+    z-index: 1;
+    color: var(--dark-blue);
+    padding: 10px 8px;
+    border-radius: 5px;
+}
+
+.subMenuForDesktop>li {
+    margin-bottom: 3px;
+    padding: 5px;
+}
+
+.subMenuForDesktop>li:hover {
+    background-color: #e8e7e7;
+    transition: 0.5s;
+    color: var(--dark-blue) !important
+}
+
+#closeBtn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+
+}
+
+#newAd {
+    width: 90px;
+    height: 20px;
+    /*  background-color: #C7BFB2; */
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+    color: var(--dark-blue);
+    font-size: 14px;
+    cursor: pointer;
+
+}
+
+.fa-plus {
+    font-size: 14px;
+    border: 1px solid;
+    border-radius: 50%;
+    font-weight: 100;
+}
+
+.main {
+    max-width: 100%;
+    margin: 0 auto;
+
+    background-color: #F6F7FA;
+    color: #596385;
+
+
+
+
+}
+
+.banner-left,
+.banner-right {
+    /*   position: fixed; */
+    position: absolute;
+    top: calc(100vh-20vh);
+    /*   max-width: 150px; */
+    /* height: 100vh; */
+
+    z-index: 1000;
+    color: white;
+    font-size: 18px;
+
+}
+
+.banner-left>img,
+.banner-right>img {
+    max-width: 80px;
+    width: 100%;
+
+}
+
+.banner-left {
+    left: 0
+}
+
+.banner-right {
+    right: 0
+}
+
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f0f3fa;
+    border-radius: 5px;
+    max-width: 700px;
+    width: 100%;
+    margin: auto;
+}
+
+.filter-item {
+    flex: 1 1 15%;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #e0e4eb;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+.filter-item.active {
+    background-color: #c02d2b;
+    color: #fff;
+}
+
+
+
+
+
+/* Cards */
+#allCars {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    margin: auto;
+}
+
+
+.card {
+    flex: 1 1 calc(25% - 10px);
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: #fff;
+}
+
+
+.card-img {
+    width: 100%;
+    height: 140px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.card-img>.fa-heart {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+
+}
+
+.solid {
+    color: orange !important
+}
+
+.card-img img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 8px;
+    padding: 20px 10px;
+}
+
+.price {
+
+    font-weight: bold;
+    font-size: 20px
+}
+
+.brand-model {
+    font-size: 18px
+}
+
+.city {
+    color: #878ea4
+}
+
+#minInput,
+#maksInput {
+    max-width: 100px;
+
+}
+
+
+
+.active {
+    background-color: var(--dark-blue) !important;
+    color: #fff !important;
+    ;
+}
+
+
+
+.notFoundText {
+    font-size: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    height: 450px;
+    padding-bottom: 50px;
+}
+
+.notFoundImg {
+    max-height: 340px;
+}
+
+.allClear:hover {
+    background-color: var(--dark-blue) !important;
+    transition: 0.3s;
+
+}
+
+
+
+@media (max-width: 768px) {
+    .filters {
+        flex-direction: row;
+        /*    align-items: stretch; */
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        max-width: 400px;
+    }
+
+    .filter-item {
+        flex: 1 1 18%;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    #allCars {
+
+        width: 400px;
+
+    }
+
+    .card {
+        flex: 1 1 calc(30% - 10px)
+    }
+
+    .card-img {
+        max-height: 100px;
+    }
+
+    .card-img>img {
+        height: 100%;
+
+    }
+
+    .card-img>.fa-heart {
+        font-size: 18px;
+    }
+
+    .card-content>.price {
+        font-size: 15px !important;
+    }
+
+    .card-content>.brand-model {
+        font-size: 13px;
+    }
+
+    .banner-left>img,
+    .banner-right>img {
+        max-width: 100px;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 418px) {
+
+    .filters {
+        max-width: 180px;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
+    }
+
+    .model {
+        max-width: 150px;
+    }
+
+    .filter-item {
+        flex: 1 1 20%;
+
+    }
+
+    #allCars {
+
+        width: 200px;
+
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 10px);
+        font-size: 12px;
+        max-height: 210px;
+    }
+
+    .card-img {
+        max-height: 65px;
+    }
+
+    .card-img>img {
+        height: 100%;
+
+    }
+
+    .card-img>.fa-heart {
+        font-size: 14px;
+    }
+
+    .card-content>.price {
+        font-size: 15px !important;
+    }
+
+    .card-content>.brand-model {
+        font-size: 13px;
+    }
+
+}
+
+@media (min-width: 418px) and (max-width: 530px) {
+    .filters {
+        flex-direction: row;
+        /*    align-items: stretch; */
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        max-width: 250px;
+    }
+
+    .filter-item {
+        flex: 1 1 28%;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    #allCars {
+
+        width: 240px;
+
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 10px)
+    }
+
+}
+
+
+@media only screen and (min-width: 768px) {
+
+    .container {
+        max-width: 960px;
+        margin: auto;
+    }
+
+
+}
+
+@media (min-width: 768px) and (max-width: 968px) {
+
+    .container {
+        max-width: 960px;
+        margin: auto;
+    }
+
+    .filters {
+        flex-direction: row;
+        /*    align-items: stretch; */
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        max-width: 650px;
+    }
+
+    .filter-item {
+        flex: 1 1 22%;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    #allCars {
+
+        width: 650px;
+
+    }
+
+    .card {
+        flex: 1 1 calc(30% - 10px)
+    }
+}
+
+@media only screen and (min-width: 968px) {
+    .container {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+
+    .info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .sites>a,
+    .about>span {
+        font: lighter 16px Aria, Helvetica, sans-serif;
+
+    }
+
+    .sites,
+    .about {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    #logo>h4 {
+        font-size: 25px;
+        margin-left: 50px;
+    }
+
+    nav {
+        height: 70px;
+    }
+
+    #menuForDesktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 20px
+    }
+
+    #menuForDesktop>li {
+        font-size: 20px;
+        display: inline-block;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+    #newAd {
+        margin-right: 50px;
+        width: 130px;
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .filters {
+
+        max-width: 650px;
+        width: 100%;
+        margin: auto;
+    }
+
+    .filter-item {
+        font-size: 18px;
+    }
+
+    #allCars {
+
+        width: 650px;
+
+    }
+
+    .card {
+        flex: 1 1 calc(30% - 10px)
+    }
+
+    .banner-left>img,
+    .banner-right>img {
+        max-width: 170px;
+        width: 100%;
+
+    }
+
+}
+
+@media only screen and (min-width: 1200px)  and (max-width: 1280px) {
+    .container {
+        max-width: 1400px;
+        margin: auto;
+    }
+
+    .filters {
+
+        max-width: 890px;
+        width: 100%;
+        margin: auto;
+    }
+
+    #allCars {
+
+        width: 890px;
+
+    }
+
+    .card {
+        flex: 1 1 calc(25% - 10px)
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .container {
+        max-width: 1500px;
+        margin: auto;
+    }
+
+    .filters {
+
+        max-width: 1000px;
+        width: 100%;
+        margin: auto;
+    }
+
+    #allCars {
+
+        display: flex;
+        width: 1000px
+    }
+
+    .card {
+        flex: 1 1 calc(25% - 10px);
+
+    }
+}
